@@ -4,6 +4,9 @@ from nltk.corpus import stopwords
 from nltk import WordNetLemmatizer
 import emoji
 
+nltk.download('stopwords')
+nltk.download('punkt')
+
 # Get the standard list
 stop_words = set(stopwords.words('english'))
 
