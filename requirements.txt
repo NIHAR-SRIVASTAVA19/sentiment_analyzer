@@ -3,3 +3,6 @@ pandas
 scikit-learn
 ipykernel
 nltk
+streamlit
+joblib
+emoji
