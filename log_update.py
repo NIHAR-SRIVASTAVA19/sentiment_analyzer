@@ -1,9 +1,8 @@
 import os
 import pandas as pd
 from utils import preprocess_text
+from check_retrain import check_and_retrain
 
-test_log="this is quite awesome!"
-correct_label=2  # positive
 def log_update(test_log, correct_label):
     clean_text = preprocess_text(test_log)
     new_log = {"reviews": clean_text, "target": correct_label}
@@ -19,3 +18,4 @@ def log_update(test_log, correct_label):
     new_df.to_csv(path, mode='a', index=False, header=not file_exists)
     
     print(f"Logged: {clean_text} as {correct_label}")
+    check_and_retrain()
